@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="index1.css">
+  </head>
+  <body>
+      <header>
+          <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class="container">
+              <a href="index1.html" class="navbar-brand">Hosiptal managment system</a>
+                <button class="navbar-toggler" data-target="#navNavbar" data-toggle="collapse"><span class="navbar-toggler-icon"></span>
+                </button>
+              <div class="collapse navbar-collapse" id="navNavbar">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <a href="index1.html" class="nav-link togglebutton active ">all patient </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="index2.html" class="nav-link togglebutton ">add new patient</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="index.html" class="nav-link togglebutton">logout</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </header>
+    <div class="container">
+      <div class="row">
+        <form>
+          <fieldset>
+            <legend>personal Information</legend>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="firstname">First Name</label>
+                <input type="text" class="form-control" id="firstname" name="firstname" placeholder="first name" required=true>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="lastname">Last Name</label>
+                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="last name" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="dob">Date of birth</label>
+                <input type="date" class="form-control" id="dob" name="dob" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">Marital Status</label>
+                <select id="maritalselect" class="form-control">
+                  <option selected>Married</option>
+                  <option>Single</option>
+                  <option>Devorced</option>
+                  <option>Complicated</option>
+                </select>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">Gender</label>
+                <select id="genderselect" class="form-control">
+                  <option selected>Male</option>
+                  <option>Female</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+              <legend>Contact Information</legend>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">Email</label>
+                <input type="email" class="form-control" name="email" id="inputEmail4" placeholder="Email" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">Phone Number</label>
+                <input type="text" class="form-control" name="pnumber" id="inputPassword4" placeholder="Phone No" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputAddress">Address</label>
+              <input type="text" class="form-control" name="address1" id="inputAddress" placeholder="Osapa london" required>
+            </div>
+            <div class="form-group">
+              <label for="inputAddress2">Address 2</label>
+              <input type="text" class="form-control" name="address2" id="inputAddress2" placeholder="Apartment, studio, or floor">
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Medical Information</legend>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">Blood Group</label>
+                <select id="bloodgroupselect" class="form-control">
+                  <option selected>A</option>
+                  <option>B</option>
+                  <option>AB</option>
+                  <option>O<sup>+</sup></option>
+                  <option>O<sup>-</sup></option>
+                </select>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">Genotype</label>
+                <select id="genotypeselect" class="form-control">
+                  <option selected>AA</option>
+                  <option>AS</option>
+                  <option>SS</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputPassword4">Day of Appointment</label>
+              <select id="appointmentselect" class="form-control">
+                <option selected>Monday</option>
+                <option>Tuseday</option>
+                <option>Wednesday</option>
+                <option>Thursday</option>
+                <option>friday</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Next of Kin</legend>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="firstname">First Name</label>
+                <input type="text" class="form-control" name="kinfirst" id="firstname" placeholder="first name" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="lastname">Last Name</label>
+                <input type="text" class="form-control" name="kinlast" id="lastname" placeholder="last name" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputAddress2">Phone Number</label>
+              <input type="text" class="form-control" name="kinnum" id="inputAddress2" required >
+            </div>
+            <div class="form-group">
+              <label for="inputAddress">Address</label>
+              <input type="text" class="form-control" id="inputAddress" name="kinaddress" placeholder="Osapa London" required>
+            </div>
+          </fieldset>
+          <button class="btn btn-primary editPro" type="submit">Update patient details</button>
+        </form>
+      </div>
+    </div>
+    <script type="text/javascript" src="jQuery-3.4.1.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+    <script src="updatePatient.js"></script>
+  </body>
+</html>

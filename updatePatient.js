@@ -38,7 +38,7 @@ function fillPatientDetailsInForm(patient) {
   $("input[name='kinaddress']").val(patient.kinAddress);
 }
 
-
+//update id
 
  async function editProfile() {
    const updatePatientDetails = await fetch(`${requestURL}/${urlParams.get('id')}`, {

@@ -6,3 +6,13 @@
   
   .navbar .nav-item.active {
     border-left: #444 3px solid; }
+
+    .btn-danger {
+        margin-left:20px;
+    }
+    .btn-info{
+      margin-right:20px;
+    }
+    .card{
+      width:300px;
+    }

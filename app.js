@@ -14,6 +14,7 @@
   });
  });
 
+ // validates form
  function validation(){
    const data = getPatientDetailsFromForm();
    if(!(data.firstName.trim())){

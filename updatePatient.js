@@ -4,6 +4,14 @@ window.onload = function () {
   getPatientDetails(urlParams.get('id'))
 }
 
+$(document).ready(function(){
+  $(".editPro").click(function(e) {
+    e.preventDefault();
+    editProfile();
+    return;
+  });
+ });
+
 async function getPatientDetails (id) {
   const getPatientRequest = await fetch(`${requestURL}/${id}`);
   const patient = await getPatientRequest.json();
@@ -30,13 +38,7 @@ function fillPatientDetailsInForm(patient) {
   $("input[name='kinaddress']").val(patient.kinAddress);
 }
 
-$(document).ready(function(){
-  $(".editPro").click(function(e) {
-    e.preventDefault();
-    editProfile();
-    return;
-  });
- });
+
 
  async function editProfile() {
    const updatePatientDetails = await fetch(`${requestURL}/${urlParams.get('id')}`, {

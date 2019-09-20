@@ -10,10 +10,10 @@ async function getAllPatientsDetails() {
   let allPatientsRecords = await getPatientRecords.json();
 
 
-  //loops through the records from the backend
+  //loop through the records 
   allPatientsRecords.forEach((record) => {
 
-    //checks if the delete
+    //checks if deleted: true
     if (record.deleted !== true) {
       const cardParent = document.createElement('div');
       cardParent.classList.add('col-4', 'pb-3', 'mb-md-0', 'main');
@@ -47,9 +47,6 @@ async function getAllPatientsDetails() {
   });
 }
 
-
-
-
 //Delete Patient Details
 async function deletePatientDetails(id) {
   const sendRequest = await fetch(`${requestURL}/${id}`, {
@@ -66,7 +63,7 @@ async function deletePatientDetails(id) {
     console.log('Someting went wrong')
   }
 }
-// To Toggle Nav Bar 
+//  Toggle Nav Bar 
 $(".togglebutton").hover(function(){
 	
  $(this).addClass("highlighted");
